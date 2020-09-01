@@ -1,5 +1,13 @@
-.App {
+.message {
+  display: flex;
+}
+
+/* .App {
   text-align: center;
+}
+
+.active {
+  opacity: 0;
 }
 
 .App-logo {
@@ -35,4 +43,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

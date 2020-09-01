@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Form from "./Form.js";
+import MessageList from "./MessageList.js";
 
 function App() {
+  const [messages, setMessages] = useState([]);
+
+  const addMessage = (message) => {
+    setMessages([message, ...messages]);
+  };
+
+  const deleteMessage = (id) => {
+    setMessages(messages.filter((message) => message.id !== id));
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MessageList messages={messages} deleteMessage={deleteMessage} />
+      <Form addMessage={addMessage} />
     </div>
   );
 }
