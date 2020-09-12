@@ -1,0 +1,79 @@
+.messages {
+  overflow: scroll;
+}
+
+.text {
+  position: relative;
+}
+
+.text:hover .buttons {
+  opacity: 1;
+}
+
+.text:hover {
+  background-color: rgba(6, 6, 7, 0.02);
+}
+
+/* div around edit and delete buttons */
+.buttons {
+  display: flex;
+  background-color: #fff;
+  height: 31px;
+  box-shadow: 0 0 0 1px rgba(6, 6, 7, 0.08);
+  border-radius: 4px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  opacity: 0;
+  position: absolute;
+  max-width: 68px;
+  top: -25px;
+  right: 0;
+  margin: 0 14px 0 32px;
+}
+
+.buttons :first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.buttons :last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.buttons:hover {
+  /* height: 31px; */
+  box-shadow: 0 4px 3px -1px lightgray, 0 0 0 1px rgba(6, 6, 7, 0.08);
+  transition: box-shadow 0.1s ease-out, -webkit-box-shadow 0.1s ease-out;
+}
+
+button {
+  display: flex;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  height: 31px;
+  cursor: pointer;
+  min-width: 24px;
+  /* position: relative; */
+}
+
+button:active img {
+  margin-top: 3px;
+}
+
+button:hover {
+  background-color: rgb(244, 244, 244);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
